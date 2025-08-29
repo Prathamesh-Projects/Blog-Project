@@ -26,22 +26,22 @@ const Footer = () => {
 
   const quickLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Prelims', href: '/category/prelims' },
-    { name: 'Mains', href: '/category/mains' },
-    { name: 'Current Affairs', href: '/category/current-affairs' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Interview', href: '/category/interview' }
+    // { name: 'Prelims', href: '/category/prelims' },
+    // { name: 'Mains', href: '/category/mains' },
+    // { name: 'Current Affairs', href: '/category/current-affairs' },
+    // { name: 'Resources', href: '/resources' },
+    // { name: 'Interview', href: '/category/interview' }
   ];
 
   const otherLinks = [
-  { name: 'Marathi News', href: '/category/news' },
-  { name: 'Poems & Stories', href: '/category/poems-stories' },
+  { name: 'Marathi News', href: '/category/marathi-news' },
+  { name: 'Poems & Stories', href: '/category/poems-&-stories' },
   { name: 'Education', href: '/category/education' },
-  { name: 'Finance & Economy', href: '/category/finance' },
-  { name: 'History & Culture', href: '/category/history-culture' },
-  { name: 'Technology', href: '/category/technology' },
+  { name: 'Finance & Economy', href: '/category/finance-&-economy' },
+  { name: 'History & Culture', href: '/category/history-&-culture' },
+  { name: 'AI & Technology', href: '/category/ai-&-technology' },
   { name: 'Current Affairs', href: '/category/current-affairs' },
-  { name: 'Lifestyle', href: '/category/lifestyle' }
+  // { name: 'Lifestyle', href: '/category/lifestyle' }
 ];
 
 

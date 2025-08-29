@@ -9,10 +9,12 @@ import HomePage from '@/pages/HomePage';
 import CategoryPage from '@/pages/CategoryPage';
 import BlogPost from '@/pages/BlogPost';
 import ResourcesPage from '@/pages/ResourcesPage';
+import ScrollToTop from "@/components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen">
         <Helmet>
           <title>UPSC Civil Services Preparation - Complete Study Material & Resources</title>
@@ -27,6 +29,7 @@ function App() {
         
         <main className="min-h-screen">
           <Routes>
+             
             <Route path="/" element={<HomePage />} />
             <Route path="/category/:categoryName" element={<CategoryPage />} />
             <Route path="/post/:postId" element={<BlogPost />} />
