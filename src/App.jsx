@@ -17,7 +17,7 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen">
         <Helmet>
-          <title>UPSC Civil Services Preparation - Complete Study Material & Resources</title>
+          <title>Pankh Nave</title>
           <meta name="description" content="Comprehensive UPSC Civil Services preparation platform with Prelims, Mains, Optional subjects, Current Affairs, and Interview guidance. Expert notes, practice tests, and study materials." />
           <meta name="keywords" content="UPSC, Civil Services, IAS, IPS, Prelims, Mains, Current Affairs, Study Material, Notes, Practice Tests" />
           <meta property="og:title" content="UPSC Civil Services Preparation - Complete Study Material & Resources" />

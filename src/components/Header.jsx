@@ -18,7 +18,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ✅ Only top-level categories (no subsections)
+  // ✅ Top-level categories only
   const navigationItems = [
     { title: "Education", href: "/category/education" },
     { title: "Poems & Stories", href: "/category/poems-&-stories" },
@@ -48,41 +48,37 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "sticky-header shadow-lg"
+          ? "sticky-header shadow-lg bg-white"
           : "bg-white border-b border-gray-200"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-10">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
-              <div className="hidden sm:block">
-                <span className="text-xl font-bold text-gray-900">
-                  PankhNave
-                </span>
-              </div>
-            </Link>
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">P</span>
+            </div>
+            <span className="hidden sm:block text-xl font-bold text-gray-900">
+              PankhNave
+            </span>
+          </Link>
 
-            {/* ✅ Desktop Nav */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.href}
-                  className="nav-link text-gray-700 hover:text-blue-600 font-medium"
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </nav>
-          </div>
+          {/* ✅ Desktop Nav */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navigationItems.map((item, index) => (
+              <Link
+                key={index}
+                to={item.href}
+                className="nav-link text-gray-700 hover:text-blue-600 font-medium"
+              >
+                {item.title}
+              </Link>
+            ))}
+          </nav>
 
           {/* Right Side */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3 sm:space-x-4">
             <button
               onClick={handleSearch}
               className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
@@ -92,16 +88,16 @@ const Header = () => {
 
             <Button
               onClick={handleJoinTelegram}
-              className="hidden md:flex bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium"
+              className="hidden md:flex bg-blue-500 hover:bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-lg font-medium"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
               Social Media
             </Button>
 
-            {/* Mobile Menu Button */}
+            {/* ✅ Mobile Menu Button (fixed overflow) */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-600 hover:text-blue-600"
+              className="lg:hidden p-2 text-gray-600 hover:text-blue-600 focus:outline-none"
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -120,9 +116,9 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden mobile-menu border-t border-gray-200"
+            className="lg:hidden mobile-menu border-t border-gray-200 bg-white"
           >
-            <div className="max-w-7xl mx-auto px-4 py-4 space-y-4">
+            <div className="px-4 py-4 space-y-4">
               {navigationItems.map((item, index) => (
                 <Link
                   key={index}

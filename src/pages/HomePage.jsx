@@ -244,7 +244,7 @@ const HomePage = () => {
   return (
     <div className="pt-16">
       <Helmet>
-        <title>UPSC Civil Services Preparation - Complete Study Material & Current Affairs</title>
+        <title>Pankh Nave</title>
         <meta name="description" content="Best UPSC Civil Services preparation platform with comprehensive study materials, daily current affairs, expert guidance for Prelims, Mains and Interview. Join thousands of successful candidates." />
       </Helmet>
 

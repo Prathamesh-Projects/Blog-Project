@@ -57,27 +57,37 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Newsletter Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <span className="text-2xl font-bold mb-4 block">Stay Updated with Latest Posts</span>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Get daily current posts, articles, poems and stories updates directly in your inbox
-            </p>
-            <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto flex gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                required
-              />
-              <Button type="submit" className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold">
-                Subscribe
-              </Button>
-            </form>
-          </div>
-        </div>
-      </div>
+<div className="bg-gradient-to-r from-blue-600 to-purple-600 py-12 px-4">
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center">
+      <span className="text-2xl font-bold mb-4 block text-white">
+        Stay Updated with Latest Posts
+      </span>
+      <p className="text-blue-100 mb-6 max-w-2xl mx-auto text-sm sm:text-base">
+        Get daily posts, articles, poems and stories updates directly in your inbox
+      </p>
+      
+      <form
+        onSubmit={handleNewsletterSubmit}
+        className="max-w-md mx-auto flex flex-col sm:flex-row gap-3"
+      >
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white w-full"
+          required
+        />
+        <Button
+          type="submit"
+          className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold w-full sm:w-auto"
+        >
+          Subscribe
+        </Button>
+      </form>
+    </div>
+  </div>
+</div>
+
 
       {/* Main Footer Content */}
       <div className="py-12">
