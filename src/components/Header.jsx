@@ -49,7 +49,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="@/assets/logo.png" // <-- replace with your logo path
+              src="/assets/logo.png" // <-- replace with your logo path
               alt="PankhNave Logo"
               className="w-8 h-8 object-contain rounded-lg"
             />
