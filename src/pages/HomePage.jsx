@@ -20,6 +20,9 @@ import FeaturedPosts from '@/components/home/FeaturedPosts';
 import RecentPosts from '@/components/home/RecentPosts';
 import RecentPostsWP from "@/components/home/RecentPostsWP";
 import FeaturedPostsWP from '@/components/home/FeaturedPostsWP';
+import StoryHero from "@/assets/banner_pankh.jpeg";
+import StoryanotherHero from "@/assets/banner_pankh02.jpeg";
+
 
 
 
@@ -34,15 +37,15 @@ const HomePage = () => {
     {
     title: "Read the Latest Marathi News",
     subtitle: "Get daily updates on politics, current affairs, and important events in simple Marathi.",
-    dedication: "Stay Informed, Stay Ahead",
-    image: "Hero banner showing Marathi newspaper and breaking news highlights",
+    // dedication: "Stay Informed, Stay Ahead",
+    image: StoryHero,
     cta: "Explore News"
   },
   {
     title: "Marathi Poems & Stories",
     subtitle: "Beautifully written poems, inspiring stories, and cultural writings in your own language.",
-    dedication: "For Literature Lovers",
-    image: "Open book with Marathi handwriting and storytelling theme",
+    // dedication: "For Literature Lovers",
+    image: StoryHero,
     cta: "Read Now"
   }
   ];
@@ -54,7 +57,7 @@ const HomePage = () => {
        title: "Marathi News",
        description: "Politics, governance, and important state & national updates",
        icon: "📰",
-       posts: 245,
+       
       color: "from-blue-500 to-blue-500"
     },
 
@@ -64,7 +67,7 @@ const HomePage = () => {
       title: "Finance & Economy",
       description: "Economic Survey, Budget, Financial Markets",
       icon: "📈",
-      posts: 189,
+    
       color: "from-green-500 to-green-600"
     },
     {
@@ -73,7 +76,7 @@ const HomePage = () => {
       title: "Education",
       description: "Exam tips, study resources, career guidance, and student updates",
       icon: "📚",
-      posts: 156,
+     
       color: "from-emerald-500 to-emerald-600"
     },
 
@@ -83,7 +86,7 @@ const HomePage = () => {
       title: "AI & Technology",
       description: "Latest Developments, Space, IT",
       icon: "🔬",
-      posts: 134,
+    
       color: "from-purple-500 to-purple-600"
     },
     { 
@@ -92,7 +95,7 @@ const HomePage = () => {
       title: "Poems & Stories",
       description: "Marathi poems, short stories, inspirational tales, and literature",
       icon: "📖",
-      posts: 167,
+      
       color: "from-orange-500 to-orange-600"
     },
 
@@ -102,7 +105,7 @@ const HomePage = () => {
       title: "History & Culture",
       description: "Ancient, Medieval, Modern History",
       icon: "🏺",
-      posts: 198,
+      
       color: "from-red-500 to-red-600"
     },
     {
@@ -111,7 +114,7 @@ const HomePage = () => {
       title: "Current Affairs",
       description: "Foreign Policy, Global Issues",
       icon: "🌍",
-      posts: 123,
+      
       color: "from-indigo-500 to-indigo-600"
     },
     {
@@ -120,7 +123,7 @@ const HomePage = () => {
       title: "Ethics & Integrity",
       description: "Case Studies, Moral Philosophy",
       icon: "⚖️",
-      posts: 89,
+    
       color: "from-pink-500 to-pink-600"
     }
   ];

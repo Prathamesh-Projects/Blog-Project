@@ -32,7 +32,7 @@ const Categories = ({ categories }) => {
                   <h3 className="text-xl font-bold mb-2">{category.title}</h3>
                   <p className="text-white/90 text-sm mb-4">{category.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium">{category.posts} Articles</span>
+                    <span className="text-sm font-medium">{category.posts} </span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>

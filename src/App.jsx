@@ -10,6 +10,7 @@ import CategoryPage from '@/pages/CategoryPage';
 import BlogPost from '@/pages/BlogPost';
 import ResourcesPage from '@/pages/ResourcesPage';
 import ScrollToTop from "@/components/ScrollToTop";
+import SearchPage from "@/pages/SearchPages"; 
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/category/:categoryName" element={<CategoryPage />} />
             <Route path="/post/:postId" element={<BlogPost />} />
             <Route path="/resources" element={<ResourcesPage />} />
+             <Route path="/search" element={<SearchPage />} />
           </Routes>
         </main>
         
