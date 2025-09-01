@@ -39,14 +39,16 @@ const HomePage = () => {
     subtitle: "Get daily updates on politics, current affairs, and important events in simple Marathi.",
     // dedication: "Stay Informed, Stay Ahead",
     image: StoryHero,
-    cta: "Explore News"
+    cta: "Explore News",
+    path: "/category/marathi-news"
   },
   {
     title: "Marathi Poems & Stories",
     subtitle: "Beautifully written poems, inspiring stories, and cultural writings in your own language.",
     // dedication: "For Literature Lovers",
     image: StoryHero,
-    cta: "Read Now"
+    cta: "Read Now",
+    path: "/category/poems-&-stories"
   }
   ];
 

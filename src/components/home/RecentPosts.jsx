@@ -64,10 +64,10 @@ const RecentPosts = ({ posts }) => {
                       <Clock className="w-3 h-3 mr-1" />
                       {post.readTime || "3 min read"}
                     </span>
-                    <span className="flex items-center">
+                    {/* <span className="flex items-center">
                       <Eye className="w-3 h-3 mr-1" />
                       {post.views || "120"}
-                    </span>
+                    </span> */}
                   </div>
                   <span>{new Date(post.date).toLocaleDateString()}</span>
                 </div>

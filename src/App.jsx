@@ -11,6 +11,10 @@ import BlogPost from '@/pages/BlogPost';
 import ResourcesPage from '@/pages/ResourcesPage';
 import ScrollToTop from "@/components/ScrollToTop";
 import SearchPage from "@/pages/SearchPages"; 
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
+import About from '@/pages/About';
+import Terms from '@/pages/Terms';
+import Contact from '@/pages/Contact';
 
 function App() {
   return (
@@ -36,6 +40,10 @@ function App() {
             <Route path="/post/:postId" element={<BlogPost />} />
             <Route path="/resources" element={<ResourcesPage />} />
              <Route path="/search" element={<SearchPage />} />
+               <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* New Route */}
+               <Route path="/about" element={<About />} />
+               <Route path="/terms" element={<Terms />} />
+               <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         

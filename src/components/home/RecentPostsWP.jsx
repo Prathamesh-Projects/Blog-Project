@@ -27,7 +27,7 @@ export default function RecentPostsWP({ limit = 6 }) {
             category: catName,
             date: p.date,
             readTime: "5 min read", // dummy for now
-            views: "—",             // dummy for now
+            // views: "—",             // dummy for now
             image,
             url: p.link,            // WP full post link
           };

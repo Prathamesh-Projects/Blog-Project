@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Youtube, MessageCircle, Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const { toast } = useToast();
@@ -26,8 +27,8 @@ const Footer = () => {
 
   const quickLinks = [
     { name: 'Home', href: '/' },
-    // { name: 'Prelims', href: '/category/prelims' },
-    // { name: 'Mains', href: '/category/mains' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Contact', href: '/contact' },
     // { name: 'Current Affairs', href: '/category/current-affairs' },
     // { name: 'Resources', href: '/resources' },
     // { name: 'Interview', href: '/category/interview' }
@@ -232,8 +233,8 @@ const Footer = () => {
             {/* Contact Info */}
             <div>
               <span className="text-lg font-semibold mb-4 block">Contact Us</span>
-              {/* <div className="space-y-3">
-                <div className="flex items-center space-x-3">
+              <div className="space-y-3">
+                {/* <div className="flex items-center space-x-3">
                   <MapPin className="w-4 h-4 text-blue-400 flex-shrink-0" />
                   <span className="text-gray-400 text-sm">
                     123 Education Street, Delhi, India - 110001
@@ -242,12 +243,12 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
                   <span className="text-gray-400 text-sm">+91 98765 43210</span>
-                </div>
+                </div> */}
                 <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span className="text-gray-400 text-sm">info@upsccivilservices.com</span>
+                  <span className="text-gray-400 text-sm">rahulip33@gmail.com</span>
                 </div>
-              </div> */}
+              </div>
               
               <div className="mt-6">
                 <span className="text-sm font-semibold mb-2 block">Important Links</span>
@@ -281,14 +282,14 @@ const Footer = () => {
               © 2024 Pankh Nave. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <a href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <a href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Disclaimer
+              <a href="/about" className="text-gray-400 hover:text-white text-sm transition-colors">
+                About Us
               </a>
             </div>
           </div>
@@ -297,22 +298,22 @@ const Footer = () => {
 
       {/* Floating Action Buttons for Mobile */}
       <div className="fixed bottom-4 right-4 md:hidden space-y-2 z-40">
-        <motion.button
+        {/* <motion.button
           onClick={() => handleSocialClick('Telegram')}
           className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
           <MessageCircle className="w-6 h-6 text-white" />
-        </motion.button>
+        </motion.button> */}
         <motion.button
-          onClick={() => handleSocialClick('WhatsApp')}
-          className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shadow-lg"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <Phone className="w-6 h-6 text-white" />
-        </motion.button>
+            onClick={() => window.open("https://whatsapp.com/channel/0029VbBMb1O8V0tjACRkyr2B", "_blank")}
+            className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shadow-lg"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            >
+          <FaWhatsapp className="w-6 h-6 text-white" />
+         </motion.button>
       </div>
     </footer>
   );

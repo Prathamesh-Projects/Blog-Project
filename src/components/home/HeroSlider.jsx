@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
-const HeroSlider = ({ heroSlides, handleFeatureClick }) => {
+const HeroSlider = ({ heroSlides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const timerRef = useRef(null);
+  const navigate = useNavigate();
 
-  // Auto-slide if autoplay is enabled
   useEffect(() => {
     if (isAutoPlay) {
       timerRef.current = setInterval(() => {
@@ -22,17 +23,24 @@ const HeroSlider = ({ heroSlides, handleFeatureClick }) => {
     setCurrentSlide((prev) =>
       prev === 0 ? heroSlides.length - 1 : prev - 1
     );
-    setIsAutoPlay(false); // pause autoplay after interaction
+    setIsAutoPlay(false);
   };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    setIsAutoPlay(false); // pause autoplay after interaction
+    setIsAutoPlay(false);
   };
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
-    setIsAutoPlay(false); // pause autoplay after interaction
+    setIsAutoPlay(false);
+  };
+
+  const handleCTAClick = (slide) => {
+    // Navigate based on slide.slug or slide.path
+    if (slide.path) {
+      navigate(slide.path);
+    }
   };
 
   return (
@@ -52,12 +60,11 @@ const HeroSlider = ({ heroSlides, handleFeatureClick }) => {
             backgroundPosition: "center",
           }}
         >
-          {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/50"></div>
 
-          {/* Content */}
+          {/* Content - Hidden on Mobile */}
           <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <div className="text-white space-y-6">
+            <div className="text-white space-y-6 hidden sm:block">
               {slide.dedication && (
                 <motion.div
                   className="inline-block bg-white/20 text-white px-4 py-1 rounded-full text-sm font-medium"
@@ -91,13 +98,12 @@ const HeroSlider = ({ heroSlides, handleFeatureClick }) => {
                 transition={{ delay: 0.6 }}
               >
                 <Button
-                  onClick={() => handleFeatureClick(slide.cta)}
+                  onClick={() => handleCTAClick(slide)}
                   className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-semibold text-base"
                 >
                   {slide.cta}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                
               </motion.div>
             </div>
           </div>

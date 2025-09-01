@@ -79,10 +79,10 @@ const FeaturedPostsWP = () => {
                         <Clock className="w-4 h-4 mr-1" />
                         5 min read
                       </span>
-                      <span className="flex items-center">
+                      {/* <span className="flex items-center">
                         <Eye className="w-4 h-4 mr-1" />
                         100 views
-                      </span>
+                      </span> */}
                     </div>
                     <span>
                       {new Date(post.date).toLocaleDateString("en-IN")}
